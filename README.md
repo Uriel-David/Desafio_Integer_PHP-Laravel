@@ -21,4 +21,4 @@ just run the command `./vendor/bin/sail artisan db:seed --env=testing` the param
 is to call the env from test instead of development.
 
 Remembering that you will need to copy the .env.example to an .env file to start
-the project and probably use the `sail artisan key:generate` command.
+the project and probably use the `./vendor/bin/sail artisan key:generate` command.
