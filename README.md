@@ -15,7 +15,7 @@ If you want to use the command in a simplified way, in this case just `sail comm
 just enter this command in the terminal `alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail) '`.
 
 There is a very simple test suitcase for the controller, where you can if you want to run
-the command `./vendor/bin/sail artisan test tests/Unit/ToDoControllerTest.php`, Furthermore,
+the command `./vendor/bin/sail artisan test`, Furthermore,
 if necessary, there is a seeder created to supply all tables in both the standard base and the test base,
 just run the command `./vendor/bin/sail artisan db:seed --env=testing` the parameter `-- env=testing`
 is to call the env from test instead of development.
