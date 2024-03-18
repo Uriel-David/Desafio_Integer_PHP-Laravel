@@ -19,3 +19,6 @@ the command `./vendor/bin/sail artisan test`, Furthermore,
 if necessary, there is a seeder created to supply all tables in both the standard base and the test base,
 just run the command `./vendor/bin/sail artisan db:seed --env=testing` the parameter `-- env=testing`
 is to call the env from test instead of development.
+
+Remembering that you will need to copy the .env.example to an .env file to start
+the project and probably use the `sail artisan key:generate` command.
