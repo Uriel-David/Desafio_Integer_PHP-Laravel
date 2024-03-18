@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ToDoUpdateResquest extends FormRequest
+class ToDoCreateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,8 +22,8 @@ class ToDoUpdateResquest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'         => 'string|max:30',
-            'description'   => 'string|max:60',
+            'title'         => 'required|string|max:30',
+            'description'   => 'required|string|max:60',
             'is_checked'    => 'boolean'
         ];
     }

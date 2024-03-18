@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ToDoCreateResquest;
-use App\Http\Requests\ToDoUpdateResquest;
+use App\Http\Requests\ToDoCreateRequest;
+use App\Http\Requests\ToDoUpdateRequest;
 use App\Http\Resources\ToDoResource;
 use App\Http\Services\ToDoService;
 use Illuminate\Http\Request;
@@ -22,14 +22,14 @@ class ToDoController extends Controller
         return $todos;
     }
 
-    public function createToDo(ToDoCreateResquest $request): ToDoResource
+    public function createToDo(ToDoCreateRequest $request): ToDoResource
     {
         $todo = $request->validated();
         $todo = $this->toDoService->createToDo($todo);
         return $todo;
     }
 
-    public function updateToDo(ToDoUpdateResquest $request, int $id): ToDoResource
+    public function updateToDo(ToDoUpdateRequest $request, int $id): ToDoResource
     {
         $todo = $request->validated();
         $todo = $this->toDoService->updateToDo($todo, $id);

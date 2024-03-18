@@ -1,14 +1,13 @@
 <?php
 
-namespace Tests\Unit\Controllers;
+namespace Tests\Feature\Controllers;
 
 use Tests\TestCase;
 use App\Models\ToDo;
-use App\Http\Controllers\ToDoController;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Response;
 
-class ToDoControllerTest extends TestCase
+class ToDoIntegrationTest extends TestCase
 {
     use RefreshDatabase;
 
